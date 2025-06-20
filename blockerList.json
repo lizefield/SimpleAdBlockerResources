@@ -1,6 +1,6 @@
 {
-  "version": "0.0.19",
-  "updated_at": "2025-06-20T21:32:00+09:00",
+  "version": "0.0.20",
+  "updated_at": "2025-06-20T21:46:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -165,20 +165,11 @@
     },
     {
       "trigger": {
-        "url-filter": ".*trilltrill\\.jp/articles/4180977.*"
+        "url-filter": ".*trilltrill\\.jp/.*"
       },
       "action": {
         "type": "css-display-none",
         "selector": ".adsbygoogle, .ad, .ad-slot, .trill-ad, .trill-article-ad, iframe[src*='doubleclick.net'], iframe[src*='googlesyndication.com']"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": ".*trilltrill\\.jp/.*",
-        "resource-type": ["script"]
-      },
-      "action": {
-        "type": "block"
       }
     }
   ]
