@@ -1,6 +1,6 @@
 {
-  "version": "0.0.2",
-  "updated_at": "2025-06-20T10:30:47+09:00",
+  "version": "0.0.3",
+  "updated_at": "2025-06-20T12:11:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -27,6 +27,34 @@
         "type": "css-display-none",
         "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads, iframe[src*='ads.yahoo.co.jp'], iframe[src*='yads.yahoo.co.jp']"
       }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://yads\\.(c\\.yimg|yjtag\\.yahoo)\\.co\\.jp/.*",
+        "resource-type": ["script", "raw", "subdocument"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://s\\.yimg\\.jp/images/(advertising|listing/tool/yads)/.*",
+        "resource-type": ["script", "raw", "image"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://s\\.yimg\\.jp/images/slink/(unitlink|directlink|highlightsearch)/.*\\.js",
+        "resource-type": ["script"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js",
+        "resource-type": ["script"]
+      },
+      "action": { "type": "block" }
     }
   ]
 }
