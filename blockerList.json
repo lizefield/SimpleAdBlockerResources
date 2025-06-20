@@ -76,7 +76,7 @@
     },
     {
       "trigger": {
-        "url-filter": "https?://.*google.*vignette.*\\.js",
+        "url-filter": ".*vignette.*",
         "resource-type": ["script"]
       },
       "action": { "type": "block" }
