@@ -1,11 +1,20 @@
 {
-  "version": "0.0.13",
-  "updated_at": "2025-06-20T16:02:00+09:00",
+  "version": "0.0.14",
+  "updated_at": "2025-06-20T16:25:00+09:00",
   "rules": [
     {
       "trigger": {
         "url-filter": ".*",
         "resource-type": ["image"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "ads.yahoo.co.jp",
+        "resource-type": ["script", "subdocument"]
       },
       "action": {
         "type": "block"
