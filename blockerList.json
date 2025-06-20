@@ -1,6 +1,6 @@
 {
-  "version": "0.0.22",
-  "updated_at": "2025-06-20T23:37:00+09:00",
+  "version": "0.0.23",
+  "updated_at": "2025-06-21T00:17:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -67,15 +67,6 @@
         "url-filter": "vignette"
       },
       "action": { "type": "block" }
-    },
-    {
-      "trigger": {
-        "url-filter": "^https?://trilltrill\\.jp/"
-      },
-      "action": {
-        "type": "css-display-none",
-        "selector": ".adsbygoogle, .ad, .ad-slot, .trill-ad, .trill-article-ad, .fullscreen-ad, .modal, .modal-backdrop, .overlay, .ad-overlay, .ad-modal, .ad-dialog, #modalAd, #overlayAd, iframe[src*='ads'], iframe[src*='doubleclick.net'], iframe[src*='googlesyndication.com']"
-      }
     },
     {
       "trigger": {
