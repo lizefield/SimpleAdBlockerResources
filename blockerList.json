@@ -1,16 +1,7 @@
 {
-  "version": "0.0.17",
-  "updated_at": "2025-06-20T20:28:00+09:00",
+  "version": "0.0.18",
+  "updated_at": "2025-06-20T20:48:00+09:00",
   "rules": [
-    {
-      "trigger": {
-        "url-filter": ".*",
-        "resource-type": ["image"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
     {
       "trigger": {
         "url-filter": "doubleclick.net"
