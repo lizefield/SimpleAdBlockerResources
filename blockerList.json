@@ -1,6 +1,6 @@
 {
-  "version": "0.0.18",
-  "updated_at": "2025-06-20T20:48:00+09:00",
+  "version": "0.0.19",
+  "updated_at": "2025-06-20T21:32:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -17,6 +17,33 @@
       "action": {
         "type": "css-display-none",
         "selector": ".ad, .adsbygoogle"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*doubleclick\\.net/.*",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*googlesyndication\\.com/.*",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*adsbygoogle.*"
+      },
+      "action": {
+        "type": "css-display-none",
+        "selector": ".adsbygoogle, iframe[src*='ads']"
       }
     },
     {
@@ -130,6 +157,24 @@
     {
       "trigger": {
         "url-filter": "vignette",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*trilltrill\\.jp/articles/4180977.*"
+      },
+      "action": {
+        "type": "css-display-none",
+        "selector": ".adsbygoogle, .ad, .ad-slot, .trill-ad, .trill-article-ad, iframe[src*='doubleclick.net'], iframe[src*='googlesyndication.com']"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*trilltrill\\.jp/.*",
         "resource-type": ["script"]
       },
       "action": {
