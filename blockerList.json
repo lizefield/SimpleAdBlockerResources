@@ -1,6 +1,6 @@
 {
-  "version": "0.0.1",
-  "updated_at": "2025-06-20T10:30:00Z",
+  "version": "0.0.2",
+  "updated_at": "2025-06-20T10:30:47+09:00",
   "rules": [
     {
       "trigger": {
@@ -25,7 +25,7 @@
       },
       "action": {
         "type": "css-display-none",
-        "selector": ".adWrapper, .yjAd, .yjS, iframe[src*='ads.yahoo.co.jp']"
+        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads, iframe[src*='ads.yahoo.co.jp'], iframe[src*='yads.yahoo.co.jp']"
       }
     }
   ]
