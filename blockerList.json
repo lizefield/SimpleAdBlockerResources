@@ -1,16 +1,7 @@
 {
-  "version": "0.0.23",
-  "updated_at": "2025-06-21T00:17:00+09:00",
+  "version": "0.0.24",
+  "updated_at": "2025-06-21T00:57:00+09:00",
   "rules": [
-    {
-      "trigger": {
-        "url-filter": "^https?://"
-      },
-      "action": {
-        "type": "css-display-none",
-        "selector": ".ad, .adsbygoogle, iframe[src*='ads'], iframe[src*='doubleclick.net'], iframe[src*='googlesyndication.com']"
-      }
-    },
     {
       "trigger": {
         "url-filter": "^https?://.*\\.doubleclick\\.net/"
