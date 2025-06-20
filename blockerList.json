@@ -1,6 +1,6 @@
 {
-  "version": "0.0.3",
-  "updated_at": "2025-06-20T12:11:00+09:00",
+  "version": "0.0.4",
+  "updated_at": "2025-06-20T12:58:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -52,6 +52,22 @@
     {
       "trigger": {
         "url-filter": "https?://s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js",
+        "resource-type": ["script"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*salonkinoe\\.com/expo2025-ticketcampaign/.*"
+      },
+      "action": {
+        "type": "css-display-none",
+        "selector": "#google-vignette, .vignette-overlay, .vignette-container"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://.*google.*vignette.*\\.js",
         "resource-type": ["script"]
       },
       "action": { "type": "block" }
