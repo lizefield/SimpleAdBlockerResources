@@ -1,0 +1,19 @@
+[
+  {
+    "trigger": {
+      "url-filter": ".*doubleclick\\.net.*"
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+  {
+    "trigger": {
+      "url-filter": ".*ads.*"
+    },
+    "action": {
+      "type": "css-display-none",
+      "selector": ".ad, .banner, .adsbygoogle"
+    }
+  }
+]
