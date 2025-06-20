@@ -1,52 +1,153 @@
 {
-  "version": "0.0.24",
-  "updated_at": "2025-06-21T00:57:00+09:00",
+  "version": "0.0.20",
+  "updated_at": "2025-06-20T21:46:00+09:00",
   "rules": [
     {
       "trigger": {
-        "url-filter": "^https?://.*\\.doubleclick\\.net/"
+        "url-filter": "doubleclick.net"
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "block"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://.*\\.googlesyndication\\.com/"
+        "url-filter": "ads"
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "css-display-none",
+        "selector": ".ad, .adsbygoogle"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://ads\\.yahoo\\.co\\.jp/"
+        "url-filter": ".*doubleclick\\.net/.*",
+        "resource-type": ["script"]
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "block"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://yads\\.(yahoo|yjtag\\.yahoo|c\\.yimg)\\.co\\.jp/"
+        "url-filter": ".*googlesyndication\\.com/.*",
+        "resource-type": ["script"]
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "block"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/(advertising|listing/tool/yads)/"
+        "url-filter": ".*adsbygoogle.*"
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "css-display-none",
+        "selector": ".adsbygoogle, iframe[src*='ads']"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/(unitlink|directlink|highlightsearch)/.*\\.js"
+        "url-filter": "detail.chiebukuro.yahoo.co.jp/qa/question_detail/"
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "css-display-none",
+        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js"
+        "url-filter": "ads.yahoo.co.jp",
+        "resource-type": ["script"]
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "block"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://salonkinoe\\.com/"
+        "url-filter": "yads.yahoo.co.jp",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "yads.c.yimg.co.jp",
+        "resource-type": ["script", "raw"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "yads.yjtag.yahoo.co.jp",
+        "resource-type": ["script", "raw"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "s.yimg.jp/images/advertising/",
+        "resource-type": ["script", "image", "raw"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "s.yimg.jp/images/listing/tool/yads/",
+        "resource-type": ["script", "image", "raw"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "s.yimg.jp/images/slink/unitlink/.*.js",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "s.yimg.jp/images/slink/directlink/.*.js",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "s.yimg.jp/images/slink/highlightsearch/.*.js",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "s.yimg.jp/images/ds/yas/ya-.*.js",
+        "resource-type": ["script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": "salonkinoe.com/expo2025-ticketcampaign/"
       },
       "action": {
         "type": "css-display-none",
@@ -55,17 +156,20 @@
     },
     {
       "trigger": {
-        "url-filter": "vignette"
+        "url-filter": "vignette",
+        "resource-type": ["script"]
       },
-      "action": { "type": "block" }
+      "action": {
+        "type": "block"
+      }
     },
     {
       "trigger": {
-        "url-filter": "^https?://detail\\.chiebukuro\\.yahoo\\.co\\.jp/"
+        "url-filter": ".*trilltrill\\.jp/.*"
       },
       "action": {
         "type": "css-display-none",
-        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads"
+        "selector": ".adsbygoogle, .ad, .ad-slot, .trill-ad, .trill-article-ad, iframe[src*='doubleclick.net'], iframe[src*='googlesyndication.com']"
       }
     }
   ]
