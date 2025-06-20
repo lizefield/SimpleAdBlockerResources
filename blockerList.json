@@ -1,28 +1,17 @@
 {
-  "version": "0.0.10",
-  "updated_at": "2025-06-20T15:05:00+09:00",
+  "version": "0.0.11",
+  "updated_at": "2025-06-20T15:15:00+09:00",
   "rules": [
     {
-      "trigger": {
-        "url-filter": ".*",
-        "resource-type": ["image"]
-      },
-      "action": {
-        "type": "block"
-      }
+      "trigger": { "url-filter": ".*", "resource-type": ["image"] },
+      "action": { "type": "block" }
     },
     {
-      "trigger": {
-        "url-filter": ".*doubleclick\\.net.*"
-      },
-      "action": {
-        "type": "block"
-      }
+      "trigger": { "url-filter": "doubleclick\\.net" },
+      "action": { "type": "block" }
     },
     {
-      "trigger": {
-        "url-filter": ".*ads.*"
-      },
+      "trigger": { "url-filter": "ads" },
       "action": {
         "type": "css-display-none",
         "selector": ".ad, .adsbygoogle"
@@ -30,7 +19,7 @@
     },
     {
       "trigger": {
-        "url-filter": ".*detail\\.chiebukuro\\.yahoo\\.co\\.jp/qa/question_detail/.*"
+        "url-filter": "detail\\.chiebukuro\\.yahoo\\.co\\.jp/qa/question_detail/"
       },
       "action": {
         "type": "css-display-none",
@@ -39,111 +28,84 @@
     },
     {
       "trigger": {
-        "url-filter": ".*ads\\.yahoo\\.co\\.jp.*",
-        "resource-type": ["subdocument", "script"]
+        "url-filter": "ads\\.yahoo\\.co\\.jp",
+        "resource-type": ["script", "subdocument"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": ".*yads\\.yahoo\\.co\\.jp.*",
-        "resource-type": ["subdocument", "script"]
+        "url-filter": "yads\\.yahoo\\.co\\.jp",
+        "resource-type": ["script", "subdocument"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://yads\\.c\\.yimg\\.co\\.jp/.*",
-        "resource-type": ["script", "raw", "subdocument"]
+        "url-filter": "yads\\.c\\.yimg\\.co\\.jp",
+        "resource-type": ["script", "subdocument", "raw"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://yads\\.yjtag\\.yahoo\\.co\\.jp/.*",
-        "resource-type": ["script", "raw", "subdocument"]
+        "url-filter": "yads\\.yjtag\\.yahoo\\.co\\.jp",
+        "resource-type": ["script", "subdocument", "raw"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://s\\.yimg\\.jp/images/advertising/.*",
-        "resource-type": ["script", "raw", "image"]
+        "url-filter": "s\\.yimg\\.jp/images/advertising/",
+        "resource-type": ["script", "image", "raw"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://s\\.yimg\\.jp/images/listing/tool/yads/.*",
-        "resource-type": ["script", "raw", "image"]
+        "url-filter": "s\\.yimg\\.jp/images/listing/tool/yads/",
+        "resource-type": ["script", "image", "raw"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://s\\.yimg\\.jp/images/slink/unitlink/.*\\.js",
+        "url-filter": "s\\.yimg\\.jp/images/slink/unitlink/.*\\.js",
         "resource-type": ["script"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://s\\.yimg\\.jp/images/slink/directlink/.*\\.js",
+        "url-filter": "s\\.yimg\\.jp/images/slink/directlink/.*\\.js",
         "resource-type": ["script"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://s\\.yimg\\.jp/images/slink/highlightsearch/.*\\.js",
+        "url-filter": "s\\.yimg\\.jp/images/slink/highlightsearch/.*\\.js",
         "resource-type": ["script"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https://s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js",
+        "url-filter": "s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js",
         "resource-type": ["script"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
-      "trigger": {
-        "url-filter": ".*salonkinoe\\.com/expo2025-ticketcampaign/.*"
-      },
+      "trigger": { "url-filter": "salonkinoe\\.com/expo2025-ticketcampaign/" },
       "action": {
         "type": "css-display-none",
         "selector": "#google-vignette, .vignette-overlay, .vignette-container"
       }
     },
     {
-      "trigger": {
-        "url-filter": ".*vignette.*",
-        "resource-type": ["script"]
-      },
-      "action": {
-        "type": "block"
-      }
+      "trigger": { "url-filter": "vignette", "resource-type": ["script"] },
+      "action": { "type": "block" }
     }
   ]
 }
