@@ -1,6 +1,6 @@
 {
-  "version": "0.0.9",
-  "updated_at": "2025-06-20T13:52:00+09:00",
+  "version": "0.0.10",
+  "updated_at": "2025-06-20T15:05:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -34,7 +34,25 @@
       },
       "action": {
         "type": "css-display-none",
-        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads, iframe[src*=\"ads.yahoo.co.jp\"], iframe[src*=\"yads.yahoo.co.jp\"]"
+        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*ads\\.yahoo\\.co\\.jp.*",
+        "resource-type": ["subdocument", "script"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*yads\\.yahoo\\.co\\.jp.*",
+        "resource-type": ["subdocument", "script"]
+      },
+      "action": {
+        "type": "block"
       }
     },
     {
