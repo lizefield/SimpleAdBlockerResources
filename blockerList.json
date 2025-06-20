@@ -4,6 +4,15 @@
   "rules": [
     {
       "trigger": {
+        "url-filter": ".*",
+        "resource-type": ["image"]
+      },
+      "action": {
+        "type": "block"
+      }
+    },
+    {
+      "trigger": {
         "url-filter": ".*doubleclick\\.net.*"
       },
       "action": {
