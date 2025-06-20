@@ -1,10 +1,10 @@
 {
-  "version": "0.0.5",
-  "updated_at": "2025-06-20T13:05:00+09:00",
+  "version": "0.0.6",
+  "updated_at": "2025-06-20T13:19:00+09:00",
   "rules": [
     {
       "trigger": {
-        "url-filter": ".*",
+        "url-filter": "^https?:\\/\\/.*",
         "resource-type": ["image"]
       },
       "action": {
@@ -39,21 +39,49 @@
     },
     {
       "trigger": {
-        "url-filter": "https?://yads\\.(c\\.yimg|yjtag\\.yahoo)\\.co\\.jp/.*",
+        "url-filter": "https?://yads\\.c\\.yimg\\.co\\.jp/.*",
         "resource-type": ["script", "raw", "subdocument"]
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https?://s\\.yimg\\.jp/images/(advertising|listing/tool/yads)/.*",
+        "url-filter": "https?://yads\\.yjtag\\.yahoo\\.co\\.jp/.*",
+        "resource-type": ["script", "raw", "subdocument"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://s\\.yimg\\.jp/images/advertising/.*",
         "resource-type": ["script", "raw", "image"]
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "https?://s\\.yimg\\.jp/images/slink/(unitlink|directlink|highlightsearch)/.*\\.js",
+        "url-filter": "https?://s\\.yimg\\.jp/images/listing/tool/yads/.*",
+        "resource-type": ["script", "raw", "image"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://s\\.yimg\\.jp/images/slink/unitlink/.*\\.js",
+        "resource-type": ["script"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://s\\.yimg\\.jp/images/slink/directlink/.*\\.js",
+        "resource-type": ["script"]
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "https?://s\\.yimg\\.jp/images/slink/highlightsearch/.*\\.js",
         "resource-type": ["script"]
       },
       "action": { "type": "block" }
