@@ -18,6 +18,15 @@
         "type": "css-display-none",
         "selector": ".ad, .adsbygoogle"
       }
+    },
+    {
+      "trigger": {
+        "url-filter": ".*detail\\.chiebukuro\\.yahoo\\.co\\.jp/qa/question_detail/.*"
+      },
+      "action": {
+        "type": "css-display-none",
+        "selector": ".adWrapper, .yjAd, .yjS, iframe[src*='ads.yahoo.co.jp']"
+      }
     }
   ]
 }
