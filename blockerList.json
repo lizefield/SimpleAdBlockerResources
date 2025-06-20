@@ -1,19 +1,23 @@
-[
-  {
-    "trigger": {
-      "url-filter": ".*doubleclick\\.net.*"
+{
+  "version": "0.0.1",
+  "updated_at": "2025-06-20T10:30:00Z",
+  "rules": [
+    {
+      "trigger": {
+        "url-filter": ".*doubleclick\\.net.*"
+      },
+      "action": {
+        "type": "block"
+      }
     },
-    "action": {
-      "type": "block"
+    {
+      "trigger": {
+        "url-filter": ".*ads.*"
+      },
+      "action": {
+        "type": "css-display-none",
+        "selector": ".ad, .adsbygoogle"
+      }
     }
-  },
-  {
-    "trigger": {
-      "url-filter": ".*ads.*"
-    },
-    "action": {
-      "type": "css-display-none",
-      "selector": ".ad, .banner, .adsbygoogle"
-    }
-  }
-]
+  ]
+}
