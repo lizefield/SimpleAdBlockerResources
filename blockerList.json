@@ -1,89 +1,61 @@
 {
-  "version": "0.0.21",
-  "updated_at": "2025-06-21T10:02:00+09:00",
+  "version": "0.0.22",
+  "updated_at": "2025-06-21T18:03:00+09:00",
   "rules": [
     {
       "trigger": {
-        "url-filter": "doubleclick\\.net"
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "ads"
+        "url-filter": "^https?://"
       },
       "action": {
         "type": "css-display-none",
-        "selector": ".ad, .adsbygoogle"
+        "selector": ".ad, .adsbygoogle, iframe[src*='ads'], iframe[src*='doubleclick.net'], iframe[src*='googlesyndication.com']"
       }
     },
     {
       "trigger": {
-        "url-filter": "googlesyndication\\.com",
-        "resource-type": ["script"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "adsbygoogle"
-      },
-      "action": {
-        "type": "css-display-none",
-        "selector": ".adsbygoogle, iframe[src*='ads']"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "yahoo"
-      },
-      "action": {
-        "type": "css-display-none",
-        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "^https?://(ads|yads)\\.yahoo\\.co\\.jp/.*",
-        "resource-type": ["script"]
+        "url-filter": "^https?://.*\\.doubleclick\\.net/"
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "^https?://yads\\.(c\\.yimg|yjtag\\.yahoo)\\.co\\.jp/.*",
-        "resource-type": ["script", "raw"]
+        "url-filter": "^https?://.*\\.googlesyndication\\.com/"
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/(advertising|listing/tool/yads)/.*",
-        "resource-type": ["script", "image", "raw"]
+        "url-filter": "^https?://ads\\.yahoo\\.co\\.jp/"
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/(unitlink|directlink|highlightsearch)/.*\\.js",
-        "resource-type": ["script"]
+        "url-filter": "^https?://yads\\.(yahoo|yjtag\\.yahoo|c\\.yimg)\\.co\\.jp/"
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js",
-        "resource-type": ["script"]
+        "url-filter": "^https?://s\\.yimg\\.jp/images/(advertising|listing/tool/yads)/"
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "salonkinoe.com"
+        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/(unitlink|directlink|highlightsearch)/.*\\.js"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://salonkinoe\\.com/"
       },
       "action": {
         "type": "css-display-none",
@@ -92,20 +64,26 @@
     },
     {
       "trigger": {
-        "url-filter": "vignette",
-        "resource-type": ["script"]
+        "url-filter": "vignette"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://trilltrill\\.jp/"
       },
       "action": {
-        "type": "block"
+        "type": "css-display-none",
+        "selector": ".trill-ad, .trill-article-ad"
       }
     },
     {
       "trigger": {
-        "url-filter": "trilltrill\\.jp"
+        "url-filter": "^https?://detail\\.chiebukuro\\.yahoo\\.co\\.jp/"
       },
       "action": {
         "type": "css-display-none",
-        "selector": ".adsbygoogle, .ad, .ad-slot, .trill-ad, .trill-article-ad, iframe[src*='doubleclick.net'], iframe[src*='googlesyndication.com']"
+        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads"
       }
     }
   ]
