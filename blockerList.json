@@ -1,6 +1,6 @@
 {
-  "version": "0.0.22",
-  "updated_at": "2025-06-21T18:03:00+09:00",
+  "version": "0.0.21",
+  "updated_at": "2025-06-21T18:35:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -60,30 +60,6 @@
       "action": {
         "type": "css-display-none",
         "selector": "#google-vignette, .vignette-overlay, .vignette-container"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "vignette"
-      },
-      "action": { "type": "block" }
-    },
-    {
-      "trigger": {
-        "url-filter": "^https?://trilltrill\\.jp/"
-      },
-      "action": {
-        "type": "css-display-none",
-        "selector": ".trill-ad, .trill-article-ad"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "^https?://detail\\.chiebukuro\\.yahoo\\.co\\.jp/"
-      },
-      "action": {
-        "type": "css-display-none",
-        "selector": ".adWrapper, .yjAd, .yjS, .yads, .ad-space, .ads"
       }
     }
   ]
