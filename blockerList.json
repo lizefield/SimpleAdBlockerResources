@@ -1,10 +1,10 @@
 {
-  "version": "0.0.20",
-  "updated_at": "2025-06-20T21:46:00+09:00",
+  "version": "0.0.21",
+  "updated_at": "2025-06-21T10:02:00+09:00",
   "rules": [
     {
       "trigger": {
-        "url-filter": "doubleclick.net"
+        "url-filter": "doubleclick\\.net"
       },
       "action": {
         "type": "block"
@@ -21,7 +21,7 @@
     },
     {
       "trigger": {
-        "url-filter": ".*doubleclick\\.net/.*",
+        "url-filter": "googlesyndication\\.com",
         "resource-type": ["script"]
       },
       "action": {
@@ -30,16 +30,7 @@
     },
     {
       "trigger": {
-        "url-filter": ".*googlesyndication\\.com/.*",
-        "resource-type": ["script"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": ".*adsbygoogle.*"
+        "url-filter": "adsbygoogle"
       },
       "action": {
         "type": "css-display-none",
@@ -48,7 +39,7 @@
     },
     {
       "trigger": {
-        "url-filter": "detail.chiebukuro.yahoo.co.jp/qa/question_detail/"
+        "url-filter": "yahoo"
       },
       "action": {
         "type": "css-display-none",
@@ -57,97 +48,42 @@
     },
     {
       "trigger": {
-        "url-filter": "ads.yahoo.co.jp",
+        "url-filter": "^https?://(ads|yads)\\.yahoo\\.co\\.jp/.*",
         "resource-type": ["script"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "yads.yahoo.co.jp",
-        "resource-type": ["script"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "yads.c.yimg.co.jp",
+        "url-filter": "^https?://yads\\.(c\\.yimg|yjtag\\.yahoo)\\.co\\.jp/.*",
         "resource-type": ["script", "raw"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "yads.yjtag.yahoo.co.jp",
-        "resource-type": ["script", "raw"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "s.yimg.jp/images/advertising/",
+        "url-filter": "^https?://s\\.yimg\\.jp/images/(advertising|listing/tool/yads)/.*",
         "resource-type": ["script", "image", "raw"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "s.yimg.jp/images/listing/tool/yads/",
-        "resource-type": ["script", "image", "raw"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "s.yimg.jp/images/slink/unitlink/.*.js",
+        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/(unitlink|directlink|highlightsearch)/.*\\.js",
         "resource-type": ["script"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "s.yimg.jp/images/slink/directlink/.*.js",
+        "url-filter": "^https?://s\\.yimg\\.jp/images/ds/yas/ya-.*\\.js",
         "resource-type": ["script"]
       },
-      "action": {
-        "type": "block"
-      }
+      "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "s.yimg.jp/images/slink/highlightsearch/.*.js",
-        "resource-type": ["script"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "s.yimg.jp/images/ds/yas/ya-.*.js",
-        "resource-type": ["script"]
-      },
-      "action": {
-        "type": "block"
-      }
-    },
-    {
-      "trigger": {
-        "url-filter": "salonkinoe.com/expo2025-ticketcampaign/"
+        "url-filter": "salonkinoe.com"
       },
       "action": {
         "type": "css-display-none",
@@ -165,7 +101,7 @@
     },
     {
       "trigger": {
-        "url-filter": ".*trilltrill\\.jp/.*"
+        "url-filter": "trilltrill\\.jp"
       },
       "action": {
         "type": "css-display-none",
