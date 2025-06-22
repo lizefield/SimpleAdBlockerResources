@@ -1,6 +1,6 @@
 {
-  "version": "0.0.22",
-  "updated_at": "2025-06-22T07:21:00+09:00",
+  "version": "0.0.23",
+  "updated_at": "2025-06-22T08:00:00+09:00",
   "rules": [
     {
       "trigger": {
@@ -22,19 +22,49 @@
     },
     {
       "trigger": {
-        "url-filter": "^https?://yads\\.(yahoo|yjtag\\.yahoo|c\\.yimg)\\.co\\.jp/"
+        "url-filter": "^https?://yads\\.yahoo\\.co\\.jp/"
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/(advertising|listing/tool/yads)/"
+        "url-filter": "^https?://yads\\.yjtag\\.yahoo\\.co\\.jp/"
       },
       "action": { "type": "block" }
     },
     {
       "trigger": {
-        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/(unitlink|directlink|highlightsearch)/.*\\.js"
+        "url-filter": "^https?://yads\\.c\\.yimg\\.co\\.jp/"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://s\\.yimg\\.jp/images/advertising/"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://s\\.yimg\\.jp/images/listing/tool/yads/"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/unitlink/.*\\.js"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/directlink/.*\\.js"
+      },
+      "action": { "type": "block" }
+    },
+    {
+      "trigger": {
+        "url-filter": "^https?://s\\.yimg\\.jp/images/slink/highlightsearch/.*\\.js"
       },
       "action": { "type": "block" }
     },
